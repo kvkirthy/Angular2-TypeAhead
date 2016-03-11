@@ -20,7 +20,7 @@ export class AppComponent
         
         this.results = this.searchForm.controls.search.valueChanges
                         .debounceTime(500)
-                        .switchMap(searchQuery => this._http.get(`http://localhost:57301/component/api/search?term=${searchQuery}`))
+                        .switchMap(searchQuery => this._http.get(`http://localhost:3001/api/search?term=${searchQuery}`))
                         .map(res => res.json());
     }
  

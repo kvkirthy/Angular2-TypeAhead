@@ -35,7 +35,7 @@ System.register(['angular2/core', 'angular2/common', 'angular2/http', 'rxjs/Rx']
                     });
                     this.results = this.searchForm.controls.search.valueChanges
                         .debounceTime(500)
-                        .switchMap(function (searchQuery) { return _this._http.get("http://localhost:57301/component/api/search?term=" + searchQuery); })
+                        .switchMap(function (searchQuery) { return _this._http.get("http://localhost:3001/api/search?term=" + searchQuery); })
                         .map(function (res) { return res.json(); });
                 }
                 AppComponent = __decorate([
