@@ -1,0 +1,12 @@
+<div>
+    <form [ngFormModel]="searchForm">
+        <label for="search">Serach</label>
+        <input ngControl="search" id="search">        
+    </form>    
+    
+    <div *ngFor="#result of results | async">
+        <div>{{result.name}}</div>
+    </div>
+
+</div>
+
